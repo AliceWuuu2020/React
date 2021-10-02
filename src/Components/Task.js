@@ -4,10 +4,12 @@ import { FaTimes } from 'react-icons/fa'
 const Task = ({newTask, onDelete, onToggle}) => {
     return (
         <div 
+        // Why do we need to use ``?
         className={`task ${newTask.reminder ? 
         'reminder' : ''}`} 
         onDoubleClick={() => onToggle(newTask.id)}>
-            <h3>{newTask.text} <FaTimes style={{color: 'black', cursor: 'pointer'}} onClick={() => {onDelete(newTask.id)}}/></h3>
+            <h3>{newTask.text} <FaTimes style={{color: 'black', cursor: 'pointer'}} 
+            onClick={() => {onDelete(newTask.id)}}/></h3>
             <p>{newTask.day}</p>
         </div>
     )
