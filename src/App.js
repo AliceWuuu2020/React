@@ -4,6 +4,8 @@ import Tasks from "./Components/Tasks";
 import AddTask from "./Components/AddTask";
 
 const App = () => {
+  const [showAddTask, setShowAddTask] = useState(false)
+
   const [tasks, setTasks] = useState(
     [{
       id: 1,
@@ -40,8 +42,9 @@ const App = () => {
 
   return (
     <div className='container'>
-      <AddTask onAdd={addTask} />
-      <Header />
+      <Header clickMe={() => setShowAddTask(!showAddTask)}/>
+      {/* The below is equal to an if statement. */}
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> 
       : 'No Task :('}
     </div>

@@ -2,11 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'; // impt
 import Button from "./Button";
 
-const Header = ({ title }) => {
-    const clickMe = () => {
-        console.log("I've been clicked.")
-    }
-
+const Header = ({ title, clickMe }) => {
     return (
         <header className = 'header'>
             {/* Inline CSS Style 
