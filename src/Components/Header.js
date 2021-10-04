@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'; // impt
 import Button from "./Button";
 
-const Header = ({ title, clickMe }) => {
+const Header = ({ title, clickMe, buttonText }) => {
     return (
         <header className = 'header'>
             {/* Inline CSS Style 
@@ -14,7 +14,7 @@ const Header = ({ title, clickMe }) => {
               
             {/* Two parameters for button: color and text */}
             {/* <Button color='green' text='Hey'/> */}
-            <Button click={clickMe}/>
+            <Button color={buttonText ? 'pink' : 'lightBlue'} text={buttonText ? 'Add' : 'Close'} click={clickMe} buttonText={buttonText}/>
         </header>
     )
 }

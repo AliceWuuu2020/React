@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Do yoga",
+      "day": "26th September 2021",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Go shopping with Waw Ong",
+      "day": "27th September 2021",
+      "reminder": true
+    }
+  ]
+}
